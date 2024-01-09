@@ -38,10 +38,11 @@ const bookingMachine = createMachine(
         id: "buy plane tickets",
         initial: "initial",
         context: {
-            selectedCountry: "",
+            originCountry: "",
+            destinationCountry: "",
             passengers: [],
             countries: [],
-            error: '',
+            error: "",
         },
         states: {
             initial: {
@@ -54,7 +55,8 @@ const bookingMachine = createMachine(
                     CONTINUE: {
                         target: "passengers",
                         actions: assign({
-                            selectedCountry: ({ event }) => event.selectedCountry,
+                            originCountry: ({ event }) => event.originCountry,
+                            destinationCountry: ({ event }) => event.destinationCountry,
                         }),
                     },
                     CANCEL: "initial",
@@ -80,12 +82,12 @@ const bookingMachine = createMachine(
                 },
             },
             tickets: {
-                after: {
-                    5000: {
-                        target: "initial",
-                        actions: "cleanContext",
-                    }
-                },
+                // after: {
+                //     5000: {
+                //         target: "initial",
+                //         actions: "cleanContext",
+                //     }
+                // },
                 on: {
                     FINISH: {
                         target: "initial",
@@ -99,7 +101,8 @@ const bookingMachine = createMachine(
         actions: {
             cleanContext: assign(({context}) => {
                 context.passengers = [];
-                context.selectedCountry = "";
+                context.originCountry = "";
+                context.destinationCountry = "";
                 return context;
             }),
         },

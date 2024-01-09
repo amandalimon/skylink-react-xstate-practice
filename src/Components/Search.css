@@ -1,16 +1,38 @@
 .Search {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Search-select {
-    font-size: 1rem;
-    margin: 16px 0;
-    border-radius: 8px;
-    padding: 8px;
-    border: none;
-  }
-  
-  .Search-continue {
-    margin-left: auto;
-  };
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.Search-title {
+  font-size: 16px;
+}
+
+.Search-select {
+  margin: 16px 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.Calendars-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.Calendar-title {
+  font-size: 16px;
+  margin: 14px 0;
+}
+
+.Calendar-date {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.Search-continue {
+  margin-left: auto;
+}
