@@ -1,0 +1,9 @@
+.StepsLayout {
+  background-color: #ECE8DA;
+  opacity: 60%;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
