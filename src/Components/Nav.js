@@ -9,7 +9,7 @@ function Nav({ state, send }) {
     return (
         <nav className='Nav'>
             <h1 className='Nav-logo'>
-            ✈️Fly Beyond
+            ✈️SkyLink
             </h1>
             {!state.matches('initial') && !state.matches('tickets') &&
                 <button onClick={goToWelcome}

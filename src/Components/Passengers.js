@@ -27,7 +27,10 @@ function Passengers({ state, send }) {
 
     return (
         <form onSubmit={submit} className='Passengers'>
-            <p className='Passengers-title title'>Add passengers</p>
+            <p className='Passengers title title'>Passenger information</p>
+            <p className='Passengers text'>
+                Please enter the information of each passenger exactly as it appears on their official ID.
+            </p>
 
             {passengers?.map((user, idx) =>
                 <p className="new-passenger" key={`user-${idx}`}>
@@ -49,14 +52,14 @@ function Passengers({ state, send }) {
                     className='Passengers-add button-secondary'
                     type="submit"
                 >
-                    Agregar Pasajero
+                    Add Pasenger
                 </button>
                 <button
                     className={`Passenger-pay button ${passengers.length === 0 ? 'Passenger-disabled' : ''}`}
                     type="button"
                     onClick={goToTicket}
                 >
-                    Ver mi ticket
+                    See my ticket
                 </button>
             </div>
         </form>

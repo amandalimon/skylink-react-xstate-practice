@@ -9,6 +9,7 @@
 }
 
 .Search-select {
+  background-color: whitesmoke;
   margin: 16px 0;
   padding: 8px;
   border-radius: 8px;
@@ -28,6 +29,7 @@
 }
 
 .Calendar-date {
+  background-color: whitesmoke;
   padding: 8px;
   border-radius: 8px;
   border: none;

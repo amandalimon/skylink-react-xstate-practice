@@ -99,7 +99,7 @@ const bookingMachine = createMachine(
     },
     {
         actions: {
-            cleanContext: assign(({context}) => {
+            cleanContext: assign(({ context }) => {
                 context.passengers = [];
                 context.originCountry = "";
                 context.destinationCountry = "";
@@ -111,7 +111,7 @@ const bookingMachine = createMachine(
                 return context.passengers.length > 0;
             },
         },
-    }
+    },
 );
 
 export { bookingMachine }

@@ -1,60 +1,92 @@
 .Tickets {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .Tickets-finalizar {
-    margin-left: auto;
-  }
-  
-  .Tickets-ticket {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    margin-bottom: 16px;
-  }
-  
-  .Tickets-country {
-    background-color: white;
-    padding: 16px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px dashed #4F54A7;
-  }
-  
-  .Tickets-passengers {
-    background-color: rgba(151, 149, 240, 0.5);
-    padding: 16px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    border-left: 1px dashed #4F54A7;
-  }
-  
-  .Tickets-passengers p {
-    margin: 2px;
-  }
-  
-  .Tickets-passengers span {
-    position: absolute;
-    top: -10px;
-    right: 10px;
-    font-size: 60px;
-    color: #4F54A7;
-    transform: rotate(-45deg);
-  }
+  padding: 0 4px;
+}
+
+.Tickets-p {
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 0;
+}
+
+.Ticket-passenger {
+  font-size: 14px;
+  background-color: whitesmoke;
+  color: #2D3250;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0 8px 6px;
+}
+
+.Flight-details {
+  display: grid;
+  grid-template: repeat(autofit, 3, 1fr) / repeat(autofit, 3, 1fr);
+  grid-template-areas:
+    "area-1 area-1 area-1"
+    "area-2 area-3 area-4"
+    "area-5 area-6 area-7";
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.route {
+  grid-area: area-1;
+  font-size: small;
+  border-bottom: dashed 1px #92C7CF;
+  padding: 0 8px;
+}
+
+.from {
+  grid-area: area-2;
+  border-bottom: dashed 1px #92C7CF;
+  padding: 8px;
+}
+
+.to {
+  grid-area: area-5;
+  border-bottom: dashed 1px #92C7CF;
+  padding: 8px;
+}
+
+.departure-date {
+  grid-area: area-3;
+  border-bottom: dashed 1px #92C7CF;
+  padding: 8px;
+}
+
+.departure-terminal {
+  grid-area: area-6;
+  border-bottom: dashed 1px #92C7CF;
+  padding: 8px;
+}
+
+.arrival-date {
+  grid-area: area-4;
+  border-bottom: dashed 1px #92C7CF;
+  padding: 8px;
+}
+
+.arrival-terminal {
+  grid-area: area-7;
+  border-bottom: dashed 1px #92C7CF;
+  padding: 8px;
+}
+
+.Flight-details p {
+  font-weight: lighter;
+  font-size: 14px;
+  color: black;
+  padding: 0;
+}
+
+.Tickets span {
+  font-size: 12px;
+  font-weight: bolder;
+  color: #6499E9;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 6px 0;
+}

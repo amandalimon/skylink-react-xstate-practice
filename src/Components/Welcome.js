@@ -7,14 +7,12 @@ function Welcome({ send }) {
     }
 
     return (
-        <div>
-            <p className='Welcome'>
-                ¡Hello! Welcome to your gateway to the world!
+        <div className='Welcome'>
+            <p className='Welcome-p'>
+                Welcome to SkyLink, your gateway to a world of extraordinary adventures. We are ready to take your flight dreams to new heights. <br /><br /> Ready to begin the journey?
             </p>
-            <p className='Welcome-title'>
-                Explore exciting destinations, embark on unforgettable adventures, and make your travel dreams a reality with our platform. Are you ready to begin your adventure?
-            </p>
-            <button onClick={startBooking} className='Welcome-cancel button'>
+
+            <button onClick={startBooking} className='Welcome button'>
                 Let's go!
             </button>
         </div>

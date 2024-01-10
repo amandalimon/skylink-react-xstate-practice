@@ -1,4 +1,9 @@
 .Welcome {
     display: flex;
     flex-direction: column;
+    padding: 0 24px;
+}
+.Welcome button {
+    margin: 12px auto 20px;
+    padding: 8px 16px;
 }
