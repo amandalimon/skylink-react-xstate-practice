@@ -40,6 +40,8 @@ const bookingMachine = createMachine(
         context: {
             originCountry: "",
             destinationCountry: "",
+            departureDate: null,
+            returnDate: null,
             passengers: [],
             countries: [],
             error: "",
@@ -57,6 +59,8 @@ const bookingMachine = createMachine(
                         actions: assign({
                             originCountry: ({ event }) => event.originCountry,
                             destinationCountry: ({ event }) => event.destinationCountry,
+                            departureDate: ({ event }) => event.departureDate,
+                            returnDate: ({ event }) => event.returnDate,
                         }),
                     },
                     CANCEL: "initial",
@@ -82,12 +86,12 @@ const bookingMachine = createMachine(
                 },
             },
             tickets: {
-                // after: {
-                //     5000: {
-                //         target: "initial",
-                //         actions: "cleanContext",
-                //     }
-                // },
+                after: {
+                    6000: {
+                        target: "initial",
+                        actions: "cleanContext",
+                    }
+                },
                 on: {
                     FINISH: {
                         target: "initial",

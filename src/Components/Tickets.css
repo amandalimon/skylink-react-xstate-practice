@@ -20,7 +20,7 @@
 
 .Flight-details {
   display: grid;
-  grid-template: repeat(autofit, 3, 1fr) / repeat(autofit, 3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "area-1 area-1 area-1"
     "area-2 area-3 area-4"

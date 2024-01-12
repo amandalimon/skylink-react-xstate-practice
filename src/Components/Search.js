@@ -7,9 +7,6 @@ function Search({ state, send }) {
     const [originFlight, setOriginFlight] = React.useState('');
     const [destinationFlight, setDestinationFlight] = React.useState('');
 
-    const [departureDate, setDepartureDate] = React.useState(new Date());
-    const [returnDate, setReturnDate] = React.useState(new Date());
-
     const handleOriginSelectChange = (e) => {
         setOriginFlight(e.target.value);
     };
@@ -18,11 +15,24 @@ function Search({ state, send }) {
         setDestinationFlight(e.target.value);
     };
 
+    const [departureDate, setDepartureDate] = React.useState(new Date());
+    const [returnDate, setReturnDate] = React.useState(new Date());
+
+    const handleDepartureDate = (selectedDate) => {
+        setDepartureDate(selectedDate);
+    }
+
+    const handleReturnDate = (selectedDate) => {
+        setReturnDate(selectedDate);
+    };
+
     const goToPassengers = () => {
         send({
             type: "CONTINUE",
             originCountry: originFlight,
             destinationCountry: destinationFlight,
+            departureDate: departureDate,
+            returnDate: returnDate,
         });
     };
 
@@ -71,10 +81,8 @@ function Search({ state, send }) {
                     <DatePicker
                         className='Calendar-date'
                         selected={departureDate}
+                        onChange={handleDepartureDate}
                         minDate={new Date()}
-                        onChange={
-                            (departureDate) => setDepartureDate(departureDate)
-                        }
                     />
                 </seccion>
                 <seccion>
@@ -82,10 +90,8 @@ function Search({ state, send }) {
                     <DatePicker
                         className='Calendar-date'
                         selected={returnDate}
+                        onChange={handleReturnDate}
                         minDate={departureDate}
-                        onChange={
-                            (returnDate) => setReturnDate(returnDate)
-                        }
                     />
                 </seccion>
             </div>

@@ -6,6 +6,9 @@ function Tickets({ send, context }) {
     send({ type: "FINISH" });
   }
 
+  const departureDate = context.departureDate;
+  const returnDate = context.returnDate;
+
   return (
     <div className='Tickets'>
       <p className='Tickets text'>
@@ -28,15 +31,23 @@ function Tickets({ send, context }) {
         <span className='to'>To<p className='Flight-details p'>
           {context.destinationCountry}</p>
         </span>
-        <span className='departure-date'>Departure Date<p className='Flight-details p'>Tuesday, December 20, 2024</p></span>
-        <span className='arrival-date'>Arrival Date<p>Tuesday, December 6, 2024</p></span>
+        <span className='departure-date'>Departure Date
+          <p className='Flight-details p'>
+            {departureDate ? departureDate.toLocaleString() : "Not selected"}
+          </p>
+        </span>
+        <span className='arrival-date'>Return Date
+          <p>
+            {returnDate ? returnDate.toLocaleString() : "Not selected"}
+          </p>
+        </span>
         <span className='departure-terminal'>Departure Terminal<p className='Flight-details p'>Terminal 1</p> </span>
         <span className='arrival-terminal'>Arrival terminal<p className='Flight-details p'>Terminal 5</p></span>
       </div>
 
       <div className='button-container'>
         <button className='Tickets-finalizar button' onClick={finish}>
-          Finalizar
+          Finish
         </button>
       </div>
     </div >
