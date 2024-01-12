@@ -63,7 +63,10 @@ const bookingMachine = createMachine(
                             returnDate: ({ event }) => event.returnDate,
                         }),
                     },
-                    CANCEL: "initial",
+                    CANCEL: {
+                        target: "initial",
+                        actions: "cleanContext"
+                    },
                 },
                 ...fillCountries,
             },
@@ -107,6 +110,8 @@ const bookingMachine = createMachine(
                 context.passengers = [];
                 context.originCountry = "";
                 context.destinationCountry = "";
+                context.departureDate = null;
+                context.returnDate = null;
                 return context;
             }),
         },

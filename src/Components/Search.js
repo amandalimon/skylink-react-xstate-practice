@@ -76,7 +76,7 @@ function Search({ state, send }) {
             </select>
 
             <div className='Calendars-container'>
-                <seccion>
+                <div>
                     <p className='Calendar-title'>Departure</p>
                     <DatePicker
                         className='Calendar-date'
@@ -84,8 +84,8 @@ function Search({ state, send }) {
                         onChange={handleDepartureDate}
                         minDate={new Date()}
                     />
-                </seccion>
-                <seccion>
+                </div>
+                <div>
                     <p className='Calendar-title'>Return</p>
                     <DatePicker
                         className='Calendar-date'
@@ -93,7 +93,7 @@ function Search({ state, send }) {
                         onChange={handleReturnDate}
                         minDate={departureDate}
                     />
-                </seccion>
+                </div>
             </div>
 
             <button onClick={goToPassengers} disabled={originFlight === ''} className='Search-continue button'>
