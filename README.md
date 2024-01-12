@@ -23,7 +23,7 @@ SkyLink is a flight booking page developed as a practice project to learn and ap
 
 ## Demo
 
-[https://amandalimon.github.io/skylink-react-xstate-practice/](#)
+🌐 Deployed version of SkyLink [here](https://amandalimon.github.io/skylink-react-xstate-practice/)
 
 ## Screenshots
 
