@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/skylink-react-xstate-practice/static/css/main.32e4639c.css",
+    "main.js": "/skylink-react-xstate-practice/static/js/main.6c37c302.js",
+    "static/js/787.5043a26d.chunk.js": "/skylink-react-xstate-practice/static/js/787.5043a26d.chunk.js",
+    "static/media/airplane.jpg": "/skylink-react-xstate-practice/static/media/airplane.b892e085166db64597be.jpg",
+    "index.html": "/skylink-react-xstate-practice/index.html",
+    "main.32e4639c.css.map": "/skylink-react-xstate-practice/static/css/main.32e4639c.css.map",
+    "main.6c37c302.js.map": "/skylink-react-xstate-practice/static/js/main.6c37c302.js.map",
+    "787.5043a26d.chunk.js.map": "/skylink-react-xstate-practice/static/js/787.5043a26d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32e4639c.css",
+    "static/js/main.6c37c302.js"
+  ]
+}
