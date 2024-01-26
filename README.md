@@ -35,7 +35,3 @@ SkyLink is a flight booking page developed as a practice project to learn and ap
 ## Contributions
 
 Contributions are welcome! If you find any issues or have suggestions to improve the project, please create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
