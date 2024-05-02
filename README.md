@@ -17,9 +17,9 @@ SkyLink is a flight booking page developed as a practice project to learn and ap
 
 ## Usage Instructions
 
-1. Clone the repository: `git clone https://github.com/your-username/skylink.git`
-2. Install dependencies: `npm install`
-3. Start the application: `npm start`
+1. Clone the repository: `git clone https://github.com/amandalimon/skylink.git`
+3. Install dependencies: `npm install`
+4. Start the application: `npm start`
 
 ## Demo
 
